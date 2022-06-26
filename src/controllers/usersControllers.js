@@ -19,19 +19,18 @@ const findById = (async (request, response) => {
 
 const create = (async (request, response) => {
     //acessar os dados que vem do corpo da requisicao
-    const { name, email, password, role, salary } = request.body;
+    const { name, email, password, role } = request.body;
     const { _id, ...user } = await usersServices.create({
         name,
         email,
         password,
-        role,
-        salary
+        role
+        
     })
     response.status(201).json({
         name: user.name,
         email: user.email,
         role: user.role,
-        salary: user.salary,
         _id: _id
     })
 })

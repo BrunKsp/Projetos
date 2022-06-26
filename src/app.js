@@ -22,7 +22,7 @@ app.use((err, _request, response, _) => {
 })
 
 app.get("/usuarios", (request, response) => {
-    response.status(200).json({response: "Hello World!"});
+    response.status(200).json({response: "Bem Vindo!"});
 });
 
 module.exports = app;

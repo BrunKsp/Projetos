@@ -4,7 +4,7 @@ const routes = require("./routes");
 const appError = require('./errors/appError');
 
 const app = express();
-const PORT = process.envPORT || 3000;
+
 
 app.use(express.json());
 

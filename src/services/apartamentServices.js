@@ -16,15 +16,15 @@ const create = async (apartaments) => {
     }
 
 
-    if(Numberap) {
+    /*if(Numberap) {
         throw new appError("Apartamento já cadastrado", 409);
-    }
+    }*/
 
     return apartamentsModel.create(value)
 }
 
 const edit = async (id, apartaments) => {
-    const {error} = apartamentSchema.validate(user);
+    const {error} = apartamentSchema.validate(apartaments);
     if(error){
         throw new appError("Erro geral", 400);
     }
@@ -40,7 +40,7 @@ const remove = async (id) => {
     }
 }
  const createImage = async(id, image) => {
-    return usersModel.createImage(id, image);
+    return apartamentsModel.createImage(id, image);
  }
  
 
